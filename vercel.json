@@ -4,10 +4,5 @@
   "installCommand": "npm install",
   "framework": "vite",
   "outputDirectory": "dist",
-  "env": {
-    "VITE_WHATSAPP_PHONE": "@whatsapp_phone",
-    "VITE_GOOGLE_ANALYTICS_ID": "@google_analytics_id",
-    "VITE_STRIPE_PUBLIC_KEY": "@stripe_public_key",
-    "VITE_API_BASE_URL": "@api_base_url"
-  }
+  "nodeVersion": "18.x"
 }
