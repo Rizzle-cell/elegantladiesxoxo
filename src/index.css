@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 300 20% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 300 20% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 300 20% 20%;
+    
+    --primary: 331 100% 61%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 341 89% 90%;
+    --secondary-foreground: 300 20% 20%;
+    
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 331 100% 61%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 331 100% 61%;
+    
+    --chart-1: 331 100% 61%;
+    --chart-2: 341 89% 90%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 0 0% 70%;
+    --chart-5: 0 0% 85%;
+    
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 300 20% 20%;
+    --sidebar-primary: 331 100% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 341 89% 90%;
+    --sidebar-accent-foreground: 300 20% 20%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 331 100% 61%;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 300 20% 15%;
+    --foreground: 0 0% 100%;
+    
+    --card: 300 20% 20%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 300 20% 20%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 331 100% 61%;
+    --primary-foreground: 300 20% 15%;
+    
+    --secondary: 341 89% 90%;
+    --secondary-foreground: 300 20% 20%;
+    
+    --muted: 300 20% 25%;
+    --muted-foreground: 0 0% 70%;
+    
+    --accent: 331 100% 61%;
+    --accent-foreground: 300 20% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 300 20% 25%;
+    --input: 300 20% 20%;
+    --ring: 331 100% 61%;
+    
+    --chart-1: 331 100% 61%;
+    --chart-2: 341 89% 90%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 0 0% 30%;
+    --chart-5: 0 0% 20%;
+    
+    --sidebar-background: 300 20% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 331 100% 61%;
+    --sidebar-primary-foreground: 300 20% 15%;
+    --sidebar-accent: 341 89% 90%;
+    --sidebar-accent-foreground: 300 20% 20%;
+    --sidebar-border: 300 20% 25%;
+    --sidebar-ring: 331 100% 61%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Elegant Ladies Branding */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
+}
+
+.elegance-gradient {
+  background: linear-gradient(135deg, #F7C6E3 0%, #f0a9d1 100%);
+}
+
+.elegance-text {
+  @apply text-pink-600 dark:text-pink-300;
+}
+
+.button-elegant {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2;
+}
+
+.button-primary {
+  @apply button-elegant bg-pink-500 hover:bg-pink-600 text-white;
+}
+
+.button-secondary {
+  @apply button-elegant bg-pink-100 hover:bg-pink-200 text-pink-700 dark:bg-pink-900 dark:text-pink-100;
+}
+
+.card-elegant {
+  @apply rounded-xl p-6 bg-white dark:bg-neutral-900 shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+.section-padding {
+  @apply px-4 py-16 md:px-6 md:py-24;
+}
