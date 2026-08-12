@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+  content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}", "./app/**/*.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       borderRadius: {
@@ -64,7 +64,7 @@ module.exports = {
       fontFamily: {
         heading: ['Georgia, serif'],
         body: ['system-ui, -apple-system, sans-serif'],
-        display: ['Georgia, serif'],
+        display: ['Georgia, serif']
       },
       keyframes: {
         'accordion-down': {
@@ -92,5 +92,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: []
 }
