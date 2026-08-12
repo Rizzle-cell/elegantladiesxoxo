@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  font-family: theme('fontFamily.body');
+  background: linear-gradient(180deg, #fff7fb 0%, #fff4f8 100%);
+}
+
+/* small utility for glassmorphism cards */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* Loading screen */
+.loader {
+  display:flex;align-items:center;justify-content:center;height:100vh;width:100vw;background:linear-gradient(90deg,#fff5f9,#fff0f6);
+}
