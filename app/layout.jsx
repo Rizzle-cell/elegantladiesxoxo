@@ -2,7 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import SmoothScrollClient from '@/components/SmoothScrollClient'
+import SmoothScrollClient from './components/SmoothScrollClient'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400','600','700'] })
 
