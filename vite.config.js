@@ -12,6 +12,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser',
+    // Use esbuild for minification on Vercel (terser is optional and not installed by default)
+    minify: 'esbuild',
   },
 })
