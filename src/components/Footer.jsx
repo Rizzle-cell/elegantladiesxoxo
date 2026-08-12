@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { MapPin, Phone, Mail } from 'lucide-react'
 
 export default function Footer() {
@@ -19,10 +21,10 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-bold text-lg mb-4">Quick Links</h4>
             <div className="flex flex-col gap-2">
-              <Link to="/" className="text-gray-400 hover:text-pink-400 transition-colors">Home</Link>
-              <Link to="/services" className="text-gray-400 hover:text-pink-400 transition-colors">Services</Link>
-              <Link to="/gallery" className="text-gray-400 hover:text-pink-400 transition-colors">Gallery</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-pink-400 transition-colors">Contact</Link>
+              <Link href="/" className="text-gray-400 hover:text-pink-400 transition-colors">Home</Link>
+              <Link href="/services" className="text-gray-400 hover:text-pink-400 transition-colors">Services</Link>
+              <Link href="/gallery" className="text-gray-400 hover:text-pink-400 transition-colors">Gallery</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-pink-400 transition-colors">Contact</Link>
             </div>
           </div>
 
