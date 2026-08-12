@@ -1,9 +1,12 @@
-import { Link, useLocation } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
-  const location = useLocation()
+  const pathname = usePathname()
   
   const navLinks = [
     { path: '/', label: 'Home' },
@@ -12,13 +15,13 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
     { path: '/contact', label: 'Contact' }
   ]
 
-  const isActive = (path) => location.pathname === path
+  const isActive = (path) => pathname === path
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-neutral-900 border-b border-pink-200 dark:border-pink-900">
       <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 text-2xl font-heading font-bold text-pink-600">
+        <Link href="/" className="flex items-center gap-2 text-2xl font-heading font-bold text-pink-600">
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white font-bold">
             E
           </div>
@@ -31,7 +34,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`font-semibold transition-colors ${
                   isActive(link.path)
                     ? 'text-pink-600 border-b-2 border-pink-600'
@@ -80,7 +83,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`font-semibold transition-colors ${
                   isActive(link.path)
