@@ -26,28 +26,42 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`font-semibold transition-colors ${
-                isActive(link.path)
-                  ? 'text-pink-600 border-b-2 border-pink-600'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-pink-600'
-              }`}
+        <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`font-semibold transition-colors ${
+                  isActive(link.path)
+                    ? 'text-pink-600 border-b-2 border-pink-600'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-pink-600'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="https://instagram.com/elegant_ladiesxoxo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 font-semibold hover:underline"
             >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href="https://wa.me/27123456789"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-primary"
-          >
-            Book Now
-          </a>
+              Instagram
+            </a>
+
+            <a
+              href="https://wa.me/27633732935"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-primary"
+            >
+              Book Now
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -77,11 +91,23 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
                 {link.label}
               </Link>
             ))}
+
             <a
-              href="https://wa.me/27123456789"
+              href="https://instagram.com/elegant_ladiesxoxo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 font-semibold"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://wa.me/27633732935"
               target="_blank"
               rel="noopener noreferrer"
               className="button-primary block text-center"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Book Now
             </a>
