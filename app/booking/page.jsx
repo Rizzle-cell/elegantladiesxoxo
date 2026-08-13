@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 
-const CalendarDemo = dynamic(() => import('@/components/CalendarDemo'), { ssr: false })
+const CalendarDemo = dynamic(() => import('../../components/CalendarDemo'), { ssr: false })
 
 export default function BookingPage(){
   return (
